@@ -80,12 +80,12 @@ ALTER TABLE java_erp.employee
 		REFERENCES java_erp.department ( -- 부서
 			deptno -- 부서번호
 		);
-      
    
 -- 사용자 계정
 drop user 'user_java_erp'@'localhost';
 
 grant all privileges on java_erp.* to 'user_java_erp'@'localhost' IDENTIFIED BY 'rootroot';
+
 
    
 

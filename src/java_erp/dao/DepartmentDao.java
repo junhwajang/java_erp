@@ -6,10 +6,11 @@ import java_erp.dto.Department;
 
 
 public interface DepartmentDao {
-	ArrayList<Department> selectDepartmentAll();	
+	ArrayList<Department> selectDepartmentByAll();	
 	Department selectDepartmentByNo(Department department);
 	
 	int insertDepartment(Department department);
 	int updateDepartment(Department department);
 	int deleteDepartment(Department department);
+	
 }

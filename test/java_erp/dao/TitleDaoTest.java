@@ -1,14 +1,12 @@
 package java_erp.dao;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -16,15 +14,13 @@ import org.junit.runners.MethodSorters;
 import java_erp.dao.impl.TitleDaoImpl;
 import java_erp.dto.Title;
 
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TitleDaoTest {
 	private TitleDao dao;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		dao = TitleDaoImpl.getInstance();
-		
 	}
 
 	@After
@@ -53,9 +49,9 @@ public class TitleDaoTest {
 	@Test
 	public void test03InsertTitle() {
 		System.out.println("test03InsertTitle()");
-		Title newTile = new Title(3, "과장");
+		Title newTitle = new Title(3, "과장");
 		
-		int res = dao.insertTitle(newTile);
+		int res = dao.insertTitle(newTitle);
 		Assert.assertEquals(1, res);
 		System.out.println("res >> " + res);
 	}
@@ -63,7 +59,7 @@ public class TitleDaoTest {
 	@Test
 	public void test04UpdateTitle() {
 		System.out.println("test04UpdateTitle()");
-		Title updateTitle = new Title (3, "대리");
+		Title updateTitle = new Title(3, "대리");
 		
 		int res = dao.updateTitle(updateTitle);
 		Assert.assertEquals(1, res);
@@ -73,7 +69,7 @@ public class TitleDaoTest {
 	@Test
 	public void test05DeleteTitle() {
 		System.out.println("test05DeleteTitle()");
-		Title deleteTitle = new Title (3, "대리");
+		Title deleteTitle = new Title(3);
 		
 		int res = dao.deleteTitle(deleteTitle);
 		Assert.assertEquals(1, res);
@@ -81,3 +77,4 @@ public class TitleDaoTest {
 	}
 
 }
+

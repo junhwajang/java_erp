@@ -1,20 +1,20 @@
 package java_erp.dto;
 
 public class Department {
-	private int deptNo;
-	private String deptName;
-	private int floor;
+	private int deptNo;  		//부서번호  
+	private String deptName;  	//부서명
+	private int floor;  		//위치
 
 	public Department() {
-		// TODO Auto-generated constructor stub
+		//생성자
 	}
 
-	public Department(int deptNo) {
+	public Department(int deptNo) { //생성자 오버로딩
 		this.deptNo = deptNo;
 
 	}
 
-	public Department(int deptNo, String deptName, int floor) {
+	public Department(int deptNo, String deptName, int floor) { //생성자 오버로딩
 		this.deptNo = deptNo;
 		this.deptName = deptName;
 		this.floor = floor;
